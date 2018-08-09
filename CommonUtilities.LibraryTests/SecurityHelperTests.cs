@@ -14,7 +14,7 @@ namespace CommonUtilities.Library.Tests
         [TestMethod()]
         public void ValidateEncryptionAndDecryptionForPasswordTest()
         {
-            // Test to validte both encryption and decryptions
+            // Test to validte both encryption and decryption of password
             string myPassword = "Dummy45Password";
             string encryptedPassword = SecurityHelper.GetEncryptedStringForPassword(myPassword);
             string decryptedPassword = SecurityHelper.GetPasswordFromEncryptedString(encryptedPassword);
