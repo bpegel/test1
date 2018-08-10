@@ -8,7 +8,7 @@
                 <h2>Sample ASP.Net Web Application used by Build Automation Team.</h2>
             </hgroup>
             <p>
-                Sample web application to test automated deployments using build & release automation.
+                Sample web application to test automated deployments using build & release automation. Today is going to be awesome!
             </p>
         </div>
     </section>
