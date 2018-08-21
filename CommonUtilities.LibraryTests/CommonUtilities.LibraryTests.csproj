@@ -59,6 +59,12 @@
     <Compile Include="SecurityHelperTests.cs" />
     <Compile Include="WebHelperTests.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonUtilities.Library\CommonUtilities.Library.csproj">
+      <Project>{7da1a637-51a3-4a88-8952-5d7c575b80b7}</Project>
+      <Name>CommonUtilities.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
