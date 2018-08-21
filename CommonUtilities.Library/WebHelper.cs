@@ -55,7 +55,10 @@ namespace CommonUtilities.Library
                 try
                 {
                     var client = new RestClient(baseURL);
-                    client.Authenticator = new NtlmAuthenticator(userName, password);
+                    if (!string.IsNullOrEmpty(userName))
+                        client.Authenticator = new NtlmAuthenticator(userName, password);
+                    else
+                        client.Authenticator = new HttpBasicAuthenticator("username", "password");
 
                     var request = new RestRequest(requestPathUri, Method.GET);
                     var response = client.Execute(request);

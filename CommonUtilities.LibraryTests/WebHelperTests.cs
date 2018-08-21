@@ -14,9 +14,15 @@ namespace CommonUtilities.Library.Tests
         [TestMethod()]
         public void GetWebDataTest()
         {
-            string baseUrl = "https://www.google.com/";
-            string reqUri = "intl/en/about/";
-            WebResponseInfo resInfo = WebHelper.GetWebData(baseUrl, reqUri, "", "", WebTool.REST_SHARP);
+            string baseUrl = @"http://www.molinahealthcare.com";
+            string reqUri = @"/members/tx/en-us/Pages/home.aspx";
+            WebResponseInfo resInfo = new WebResponseInfo();
+            try
+            {
+                resInfo = WebHelper.GetWebData(baseUrl, reqUri, "", "", WebTool.HTTP_CLIENT);
+            }
+            catch { }
+            
             Assert.AreEqual(resInfo.HttpStatus, System.Net.HttpStatusCode.OK);
         }
     }

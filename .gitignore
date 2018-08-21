@@ -4,3 +4,4 @@ obj
 /CommonUtilities.Library/bin
 *.user
 *.suo
+/HelloWorld/.nuget/packages
